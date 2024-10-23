@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="Entidade"/>
+    <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.MappedSuperclass"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="br.itb.projeto.CentroArtesMarciais.model.entity.EntidadeBase"/>
+    <fullyQualifiedTypeName name="br.itb.projeto.CentroArtesMarciais.model.entity.Usuario"/>
+    <fullyQualifiedTypeName name="br.itb.projeto.CentroArtesMarciais.rest.controller.ControllerBase"/>
+    <fullyQualifiedTypeName name="br.itb.projeto.CentroArtesMarciais.service.ServiceBase"/>
+    <fullyQualifiedTypeName name="br.itb.projeto.CentroArtesMarciais.model.entity.Plano"/>
+    <fullyQualifiedTypeName name="br.itb.projeto.CentroArtesMarciais.model.repository.RepositoryBase"/>
+    <fullyQualifiedTypeName name="br.itb.projeto.CentroArtesMarciais.model.entity.Mensagem"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+</qualifiedTypeNameHistroy>

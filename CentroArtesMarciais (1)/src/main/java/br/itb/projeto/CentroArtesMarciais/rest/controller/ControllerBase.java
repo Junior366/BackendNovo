@@ -3,7 +3,9 @@ package br.itb.projeto.CentroArtesMarciais.rest.controller;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -55,9 +57,9 @@ public class ControllerBase<Entidade extends EntidadeBase> {
 	
 	@PutMapping("update/{id}")
 	public ResponseEntity<Entidade> update(
-			@PathVariable long id){
+			@PathVariable long id, @RequestBody Entidade nova){
 		
-		Entidade mensagem = service.update(id);
+		Entidade mensagem = service.update(id, nova);
 		
 		return new ResponseEntity<Entidade>(
 				mensagem, HttpStatus.OK);
@@ -71,6 +73,12 @@ public class ControllerBase<Entidade extends EntidadeBase> {
 		
 		return new ResponseEntity<Entidade>(
 				mensagem, HttpStatus.OK);
+	}
+	
+	@DeleteMapping("deletar/{id}")
+	public ResponseEntity<String> deletar(@PathVariable long id) {
+		service.delete(id);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 

@@ -34,18 +34,9 @@ public class MensagemService extends ServiceBase<Mensagem> {
 	
 	@Transactional
 	@Override
-	public Mensagem update(long id) {
-		//java.util.Optional
-		Optional<Mensagem> _mensagem = 
-				mensagemRepository.findById(id);
-		
-		if (_mensagem.isPresent()) {
-			Mensagem mensagemAtualizada = _mensagem.get();
-			mensagemAtualizada.setStatus("LIDA");
-			
-			return mensagemRepository.save(mensagemAtualizada);
-		}
-		return null;
+	public Mensagem update(long id, Mensagem nova) {
+		//nova.setStatus("LIDA");
+		return super.update(id, nova);
 	}
 	
 }

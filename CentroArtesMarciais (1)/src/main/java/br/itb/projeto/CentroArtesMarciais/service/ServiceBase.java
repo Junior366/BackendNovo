@@ -41,16 +41,16 @@ public class ServiceBase<Entidade extends EntidadeBase> {
 	}
 	
 	@Transactional
-	public Entidade update(long id) {
+	public Entidade update(long id, Entidade nova) {
 		//java.util.Optional
 		Optional<Entidade> _mensagem = 
 			repository.findById(id);
 		
 		if (_mensagem.isPresent()) {
-			Entidade mensagemAtualizada = _mensagem.get();
-			mensagemAtualizada.setStatus("LIDA");
+			//Entidade mensagemAtualizada = _mensagem.get();
+			//mensagemAtualizada.setStatus("LIDA");
 			
-			return repository.save(mensagemAtualizada);
+			return repository.save(nova);
 		}
 		return null;
 	}
@@ -67,5 +67,9 @@ public class ServiceBase<Entidade extends EntidadeBase> {
 			return repository.save(mensagemAtualizada);
 		}
 		return null;
+	}
+	
+	public void delete(long id) {
+		repository.deleteById(id);
 	}
 }
